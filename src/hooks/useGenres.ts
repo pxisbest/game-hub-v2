@@ -18,7 +18,8 @@ const useGenres = () =>
     queryKey: ["genres"],
     queryFn: apiClient.getAll,
     staleTime: 24 * 60 * 60 * 1000, //24 hours
-    initialData: { count: genres.length, results: genres }, //可以直接引入staticdata，不用显示spinner了
+    initialData: genres, 
+    //可以直接引入staticdata，不用显示spinner了
   });
 
 export default useGenres;
